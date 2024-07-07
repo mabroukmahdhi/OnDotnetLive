@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace OnDotnetLive.Views.Bases
 {
-    public partial class ConditionBase:ComponentBase
+    public partial class ConditionBase : ComponentBase
     {
         [Parameter]
         public bool Condition { get; set; }

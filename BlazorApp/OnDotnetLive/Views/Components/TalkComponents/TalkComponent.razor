@@ -4,8 +4,22 @@
 {
     <CardBase>
         <img src="@Talk.ThumbnailUrl" width="100%" />
-        <h4>@Talk.Title</h4>
-       
+        <div style="height:70px">
+            @if (Talk.HasDisplayTitle)
+            {
+                <h4>@Talk.DisplayTitle</h4>
+            }
+            else
+            {
+                <h4>@Talk.Title?.Replace("On .NET Live: ", "")</h4>
+            }
+        </div>
+
+        <h5><span style="font-size:small">With</span> @Talk.Guests[0].Name.Split(Environment.NewLine)[0]</h5>
+        <SpacerBase />
+        <div style="justify-content:center">
+            <ButtonBase Text="Watch now" OnClick=@WatchNowClicked />
+        </div>
     </CardBase>
 }
 else

@@ -28,13 +28,11 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>
-        async function fetchWithNoCors(url) {
-            const response = await fetch(url, {
-                mode: 'no-cors'
-            });
-            return response;
+        function openInNewTab(url) {
+            window.open(url, '_blank');
         }
     </script>
+
 
 </body>
 

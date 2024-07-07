@@ -26,7 +26,6 @@ namespace OnDotnetLive.Models.Talks
         public DateTime? ScheduledStartTime { get; set; }
         public DateTime? ActualStartTime { get; set; }
         public DateTime? ActualEndTime { get; set; }
-        public int LengthInHours { get; set; }
         public bool HasLinks { get; set; }
         public bool HasShowNotes { get; set; }
         public int Priority { get; set; }

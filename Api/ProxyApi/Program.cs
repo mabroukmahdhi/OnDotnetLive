@@ -16,6 +16,15 @@ namespace ProxyApi
             builder.Services.AddSwaggerGen();
             builder.Services.AddHttpClient();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder.WithOrigins("http://localhost:5095")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod());
+            });
+
+
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
@@ -24,6 +33,7 @@ namespace ProxyApi
                 app.UseSwaggerUI();
             }
 
+            app.UseCors("AllowSpecificOrigin");
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();

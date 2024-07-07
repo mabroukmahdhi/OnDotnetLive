@@ -1,0 +1,24 @@
+﻿@using Microsoft.FluentUI.AspNetCore.Components
+<FluentLayout>
+    <FluentHeader>
+        @Header
+    </FluentHeader>
+    <FluentStack Class="main" Orientation="Orientation.Horizontal" Width="100%">
+        @NavigationMenu
+        <FluentBodyContent Class="body-content">
+            <ErrorBoundary>
+                <ChildContent>
+                    <div class="content">
+                        @Main
+                    </div>
+                </ChildContent>
+                <ErrorContent Context="ex">
+                    <div class="blazor-error-boundary">@ex.Message</div>
+                </ErrorContent>
+            </ErrorBoundary>
+        </FluentBodyContent>
+    </FluentStack>
+    <FluentFooter>
+        @Footer
+    </FluentFooter>
+</FluentLayout>

@@ -1,9 +1,6 @@
-﻿@page "/talks"
-@using OnDotnetLive.Models.Talks
-@using OnDotnetLive.Views.Components.TalkComponents
+﻿@page "/talks" 
+@using OnDotnetLive.Views.Components.TalksListComponents
 
 <PageTitle>Talks</PageTitle>
 
-<h1>Talks</h1>
-
-<TalkComponent Talk="@(new Talk(){Title="test"})" /> 
+<TalksListComponent /> 

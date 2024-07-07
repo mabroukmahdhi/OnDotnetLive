@@ -14,6 +14,7 @@ using OnDotnetLive.Applications;
 using OnDotnetLive.Brokers.Apis;
 using OnDotnetLive.Brokers.DateTimes;
 using OnDotnetLive.Brokers.Loggings;
+using OnDotnetLive.Services.Foundations.Talks;
 
 namespace OnDotnetLive
 {
@@ -34,7 +35,9 @@ namespace OnDotnetLive
 
             builder.Services.AddSingleton<IDateTimeBroker, DateTimeBroker>();
             builder.Services.AddSingleton<ILoggingBroker, LoggingBroker>();
-            builder.Services.AddSingleton<IApiBroker, ApiBroker>();
+            builder.Services.AddScoped<IApiBroker, ApiBroker>();
+
+            builder.Services.AddScoped<ITalkService, TalkService>();
 
             await builder.Build().RunAsync();
         }

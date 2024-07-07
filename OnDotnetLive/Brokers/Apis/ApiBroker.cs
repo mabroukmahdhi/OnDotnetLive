@@ -29,6 +29,7 @@ namespace OnDotnetLive.Brokers.Apis
                     Description = "Blazor is a great platform for building enterprise apps! In this week's episode, community MVP Mabrouk Mahdhi shows us some of the lessons he's learned building Blazor apps for enterprises.",
                     Speaker = "Mabrouk Mahdhi",
                     ShowUrl = "https://www.youtube.com/live/OxId5ErcMCY?si=ILR1puHTk5LmQqki",
+                    ImageUrl="https://i.ytimg.com/vi/OxId5ErcMCY/mqdefault_live.jpg",
                     Date = DateTimeOffset.Parse("2024-07-08T19:00:00Z",CultureInfo.GetCultureInfo("de")).ToUniversalTime()
                 },
                 new() {
@@ -37,6 +38,7 @@ namespace OnDotnetLive.Brokers.Apis
                     Description = "Are you building .NET MAUI apps? In this week's episode, community MVP Pedro Jesus joins us to show how to take advantage of the new architecture to customize controls without needing to create any custom components.",
                     Speaker = "Pedro Jesus",
                     ShowUrl="https://www.youtube.com/live/tOCh0d4PpOw?si=5REyg3OA-rfr6wF2",
+                    ImageUrl="https://i.ytimg.com/vi/tOCh0d4PpOw/mqdefault_live.jpg",
                     Date =  DateTimeOffset.Parse("2024-07-01T18:00:00Z",CultureInfo.GetCultureInfo("de")).ToUniversalTime()
                 },
                 new() {
@@ -45,6 +47,7 @@ namespace OnDotnetLive.Brokers.Apis
                     Description = "What's a good way to have more fun with A.I.? Let's try building a game! In this week's episode, community MVP Sebastián Leonardo Pérez builds a simple game using .NET and Azure Open AI with text-to-speech services, spontaneous image generation, and chat-generated text.",
                     Speaker = "Sebastián Leonardo Pérez",
                     ShowUrl="https://www.youtube.com/live/9suL6pUf6Wg?si=7FFr74204dtaXMxF",
+                    ImageUrl="https://i.ytimg.com/vi/9suL6pUf6Wg/mqdefault_live.jpg",
                     Date =  DateTimeOffset.Parse("2024-06-24T18:00:00Z",CultureInfo.GetCultureInfo("de")).ToUniversalTime()
                 }
             };

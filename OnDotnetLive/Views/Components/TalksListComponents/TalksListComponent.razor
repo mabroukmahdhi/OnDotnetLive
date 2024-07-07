@@ -1,0 +1,24 @@
+@using OnDotnetLive.Views.Bases
+@using OnDotnetLive.Views.Components.TalkComponents
+
+<h1>Talks</h1>
+<GridBase>
+    @if (talks != null)
+    {
+        @foreach (var talk in talks)
+        {
+            <GridItemBase>
+                <TalkComponent Talk=@talk />
+            </GridItemBase>
+        }
+    }
+    else
+    {
+        @for (int i = 0; i < 10; i++)
+        {
+            <GridItemBase>
+                <TalkComponent Talk=@null />
+            </GridItemBase>
+        }
+    }
+</GridBase>

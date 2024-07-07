@@ -14,6 +14,7 @@ namespace OnDotnetLive.Models.Talks
         public string Description { get; set; }
         public string Speaker { get; set; }
         public string ShowUrl { get; set; }
+        public string ImageUrl { get; set; }
         public DateTimeOffset Date { get; set; }
     }
 }

@@ -2,8 +2,14 @@
 
 @if (Talk != null)
 {
-    <CardBase Height="250px" Width="510px">
-        @Talk.Title
+    <CardBase>
+        <img src="@Talk.ImageUrl" width="100%" />
+        <h4>@Talk.Title</h4>
+        <div>
+
+            <span>@Talk.Speaker</span>
+            <span>@Talk.Date</span>
+        </div>
     </CardBase>
 }
 else

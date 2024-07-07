@@ -1,12 +1,16 @@
-﻿@using OnDotnetLive.Views.Bases
+﻿@using OnDotnetLive.Models.IconNames
+@using OnDotnetLive.Views.Bases
 @inherits LayoutComponentBase
 
 <LayoutBase>
     <Header>
         On .NET Live
     </Header>
-    <NavigationMenu>
-        <NavMenu />
+    <NavigationMenu> 
+        <NavMenuBase>
+            <NavLinkBase Href="/" MatchAll=true Icon="IconName.Home" Text="Home" />
+            <NavLinkBase Href="counter" Icon="IconName.Talks" Text="Talks" />
+        </NavMenuBase>
     </NavigationMenu>
     <Main>
         @Body

@@ -1,5 +1,9 @@
 ﻿@page "/talks"
+@using OnDotnetLive.Models.Talks
+@using OnDotnetLive.Views.Components.TalkComponents
 
 <PageTitle>Talks</PageTitle>
 
 <h1>Talks</h1>
+
+<TalkComponent Talk="@(new Talk(){Title="test"})" /> 

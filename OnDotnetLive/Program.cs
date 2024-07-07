@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.FluentUI.AspNetCore.Components;
 using OnDotnetLive.Applications;
 using OnDotnetLive.Brokers.Apis;
+using OnDotnetLive.Brokers.DateTimes;
+using OnDotnetLive.Brokers.Loggings;
 
 namespace OnDotnetLive
 {
@@ -30,6 +32,8 @@ namespace OnDotnetLive
 
             builder.Services.AddFluentUIComponents();
 
+            builder.Services.AddSingleton<IDateTimeBroker, DateTimeBroker>();
+            builder.Services.AddSingleton<ILoggingBroker, LoggingBroker>();
             builder.Services.AddSingleton<IApiBroker, ApiBroker>();
 
             await builder.Build().RunAsync();

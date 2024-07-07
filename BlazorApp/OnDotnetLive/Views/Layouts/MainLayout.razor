@@ -1,0 +1,25 @@
+﻿@using OnDotnetLive.Models.Components.IconNames
+@using OnDotnetLive.Views.Bases
+@inherits LayoutComponentBase
+
+<LayoutBase>
+    <Header>
+        <img src="https://dotnetwebsitestorage.blob.core.windows.net/blob-assets/images/live/on-dotnet-live.png" height="50px" />
+        <SpacerBase />
+        On .NET Live
+    </Header>
+    <NavigationMenu>
+        <NavMenuBase>
+            <NavLinkBase Href="/" MatchAll=true Icon="IconName.Home" Text="Home" />
+            <NavLinkBase Href="talks" Icon="IconName.Talks" Text="Talks" />
+        </NavMenuBase>
+    </NavigationMenu>
+    <Main>
+        @Body
+    </Main>
+    <Footer>
+        <a href="https://mahdhi.com" target="_blank">Mabrouk Mahdhi</a>
+        <SpacerBase />
+        <a href="https://dotnet.microsoft.com/en-us/live/on-dotnet-live" target="_blank">About On .NET Live</a>
+    </Footer>
+</LayoutBase>

@@ -1,0 +1,17 @@
+@using OnDotnetLive.Views.Bases
+
+@if (TalkView != null)
+{
+    <CardBase>
+        <img src="@TalkView.GuestThumbnailUrl" width="100%" />
+        <div style="height:70px">
+            <h4>@TalkView.Title</h4>
+        </div>
+
+        <h5><span style="font-size:small">With</span> @TalkView.GuestName</h5>
+        <SpacerBase />
+        <div style="justify-content:center">
+            <ButtonBase Text="Watch now" OnClick=@WatchNowClicked />
+        </div>
+    </CardBase>
+} 

@@ -5,9 +5,8 @@
 
 using System;
 
-namespace OnDotnetLive.Models.Navigations.Exceptions
+namespace OnDotnetLive.Models.Foundations.Navigations.Exceptions
 {
-    public class NavigationValidationException(Exception innerException) : Exception(
-        message: "Navigation validation error occurred, contact support.", innerException)
+    public class InvalidNavigationUrlException() : Exception("Navigation Url is null or empty.")
     { }
 }

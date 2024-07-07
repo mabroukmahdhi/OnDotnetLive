@@ -3,22 +3,35 @@
 
 <h1>Talks</h1>
 <GridBase>
-    @if (talks != null)
-    {
-        @foreach (var talk in talks)
-        {
-            <GridItemBase>
-                <TalkComponent Talk=@talk />
-            </GridItemBase>
-        }
-    }
-    else
-    {
-        @for (int i = 0; i < 10; i++)
-        {
-            <GridItemBase>
-                <TalkComponent Talk=@null />
-            </GridItemBase>
-        }
-    }
+    <ConditionBase Condition="talkViews != null">
+        <Match>
+            <IterationsBase Items=@talkViews>
+                <GridItemBase>
+                    <TalkComponent TalkView=@context />
+                </GridItemBase>
+            </IterationsBase>
+        </Match>
+        <NotMatch>
+            <IterationsBase Items=@(new int[]{1,2,3,4,5,6,7,8,9,10})>
+                <GridItemBase>
+                    <CardBase Height="250px" Width="510px">
+                        <SkeletonBase>
+                            <svg style="position: absolute; left: 0; top: 0;" id="pattern" width="100%" height="100%">
+                                <defs>
+                                    <mask id="mask" x="0" y="0" width="100%" height="100%">
+                                        <rect x="0" y="0" width="100%" height="100%" fill="#ffffff" />
+                                        <rect x="0" y="0" width="100%" height="45%" rx="4" />
+                                        <rect x="25" y="55%" width="90%" height="15px" rx="4" />
+                                        <rect x="25" y="65%" width="70%" height="15px" rx="4" />
+                                        <rect x="25" y="80%" width="90px" height="30px" rx="4" />
+                                    </mask>
+                                </defs>
+                                <rect x="0" y="0" width="100%" height="100%" mask="url(#mask)" fill="#ffffff" />
+                            </svg>
+                        </SkeletonBase>
+                    </CardBase>
+                </GridItemBase>
+            </IterationsBase>
+        </NotMatch>
+    </ConditionBase>
 </GridBase>

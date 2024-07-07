@@ -3,7 +3,7 @@
 //  W/ love for all .NET developers from around the world.
 // ---------------------------------------------------------------
 
-namespace OnDotnetLive.Models.Guests
+namespace OnDotnetLive.Models.Foundations.Guests
 {
     public class Guest
     {

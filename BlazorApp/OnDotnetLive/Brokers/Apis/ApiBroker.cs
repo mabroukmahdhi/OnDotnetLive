@@ -9,7 +9,7 @@ using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using OnDotnetLive.Models.Configurations;
-using OnDotnetLive.Models.Talks;
+using OnDotnetLive.Models.Foundations.Talks;
 
 namespace OnDotnetLive.Brokers.Apis
 {

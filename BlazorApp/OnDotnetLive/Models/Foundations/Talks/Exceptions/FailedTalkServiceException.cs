@@ -5,7 +5,7 @@
 
 using System;
 
-namespace OnDotnetLive.Models.Talks.Exceptions
+namespace OnDotnetLive.Models.Foundations.Talks.Exceptions
 {
     public class FailedTalkServiceException(Exception innerException)
         : Exception(message: "Failed Talk service error occurred, contact support.", innerException)

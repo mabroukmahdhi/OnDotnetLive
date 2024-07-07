@@ -6,8 +6,8 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using OnDotnetLive.Models.Talks;
-using OnDotnetLive.Models.Talks.Exceptions;
+using OnDotnetLive.Models.Foundations.Talks;
+using OnDotnetLive.Models.Foundations.Talks.Exceptions;
 
 namespace OnDotnetLive.Services.Foundations.Talks
 {

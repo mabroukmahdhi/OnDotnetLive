@@ -6,21 +6,21 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using OnDotnetLive.Models.Talks;
-using OnDotnetLive.Services.Foundations.Talks;
+using OnDotnetLive.Models.Views.TalkViews;
+using OnDotnetLive.Services.Views.TalkViews;
 
 namespace OnDotnetLive.Views.Components.TalksListComponents
 {
     public partial class TalksListComponent : ComponentBase
     {
-        private List<Talk> talks;
+        private List<TalkView> talkViews;
 
         [Inject]
-        public ITalkService TalkService { get; set; }
+        protected ITalkViewService TalkViewService { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
-            talks = await TalkService.RetrieveAllTalksAsync();
+            talkViews = await TalkViewService.RetrieveAllTalkViewsAsync();
         }
     }
 }

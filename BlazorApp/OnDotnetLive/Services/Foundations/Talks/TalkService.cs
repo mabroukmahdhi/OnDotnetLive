@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using OnDotnetLive.Brokers.Apis;
 using OnDotnetLive.Brokers.Loggings;
-using OnDotnetLive.Models.Talks;
+using OnDotnetLive.Models.Foundations.Talks;
 
 namespace OnDotnetLive.Services.Foundations.Talks
 {

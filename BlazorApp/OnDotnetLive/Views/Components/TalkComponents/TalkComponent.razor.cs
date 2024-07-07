@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------
 
 using Microsoft.AspNetCore.Components;
-using OnDotnetLive.Models.Talks;
+using OnDotnetLive.Models.Views.TalkViews;
 using OnDotnetLive.Services.Foundations.Navigations;
 
 namespace OnDotnetLive.Views.Components.TalkComponents
@@ -15,9 +15,9 @@ namespace OnDotnetLive.Views.Components.TalkComponents
         public INavigationService NavigationService { get; set; }
 
         [Parameter]
-        public Talk Talk { get; set; }
+        public TalkView TalkView { get; set; }
 
         private void WatchNowClicked() =>
-            this.NavigationService.OpenNewTab(this.Talk.Url);
+            this.NavigationService.OpenNewTab(this.TalkView.YouTubeUrl);
     }
 }

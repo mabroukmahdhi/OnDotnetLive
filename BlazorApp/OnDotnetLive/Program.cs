@@ -15,6 +15,7 @@ using OnDotnetLive.Brokers.Loggings;
 using OnDotnetLive.Brokers.Navigations;
 using OnDotnetLive.Services.Foundations.Navigations;
 using OnDotnetLive.Services.Foundations.Talks;
+using OnDotnetLive.Services.Views.TalkViews;
 
 namespace OnDotnetLive
 {
@@ -37,6 +38,8 @@ namespace OnDotnetLive
 
             builder.Services.AddScoped<ITalkService, TalkService>();
             builder.Services.AddScoped<INavigationService, NavigationService>();
+
+            builder.Services.AddScoped<ITalkViewService, TalkViewService>();
 
             await builder.Build().RunAsync();
         }

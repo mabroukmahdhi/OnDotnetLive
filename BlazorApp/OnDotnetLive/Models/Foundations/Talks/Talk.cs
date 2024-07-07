@@ -6,9 +6,9 @@
 
 using System;
 using System.Collections.Generic;
-using OnDotnetLive.Models.Guests;
+using OnDotnetLive.Models.Foundations.Guests;
 
-namespace OnDotnetLive.Models.Talks
+namespace OnDotnetLive.Models.Foundations.Talks
 {
     public class Talk
     {

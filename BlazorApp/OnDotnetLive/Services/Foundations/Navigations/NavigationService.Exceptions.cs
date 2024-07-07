@@ -3,7 +3,7 @@
 //  W/ love for all .NET developers from around the world.
 // ---------------------------------------------------------------
 
-using OnDotnetLive.Models.Navigations.Exceptions;
+using OnDotnetLive.Models.Foundations.Navigations.Exceptions;
 
 namespace OnDotnetLive.Services.Foundations.Navigations
 {

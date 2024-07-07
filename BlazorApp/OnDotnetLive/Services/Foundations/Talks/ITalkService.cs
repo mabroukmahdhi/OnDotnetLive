@@ -5,7 +5,7 @@
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using OnDotnetLive.Models.Talks;
+using OnDotnetLive.Models.Foundations.Talks;
 
 namespace OnDotnetLive.Services.Foundations.Talks
 {

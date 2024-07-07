@@ -6,7 +6,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.FluentUI.AspNetCore.Components;
-using OnDotnetLive.Models.IconNames;
+using OnDotnetLive.Models.Components.IconNames;
 
 namespace OnDotnetLive.Views.Bases
 {

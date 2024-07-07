@@ -23,8 +23,15 @@ namespace OnDotnetLive.Views.Components.TalksListComponents
 
         protected override async Task OnInitializedAsync()
         {
-            this.TalkViews = await TalkViewService.RetrieveAllTalkViewsAsync();
-            this.State = ComponentState.Content;
+            try
+            {
+                this.TalkViews = await TalkViewService.RetrieveAllTalkViewsAsync();
+                this.State = ComponentState.Content;
+            }
+            catch
+            {
+                this.State = ComponentState.Error;
+            }
         }
     }
 }

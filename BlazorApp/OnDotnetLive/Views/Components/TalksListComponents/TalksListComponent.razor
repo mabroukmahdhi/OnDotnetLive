@@ -3,7 +3,7 @@
 @using OnDotnetLive.Views.Components.TalkComponents
 
 <h1>Talks</h1>
-<ContainerComponent State=State>
+<ContainerComponent State=State Error="Could'nt load talks...">
     <Content>
         <GridBase>
             <ConditionBase Condition="TalkViews != null">

@@ -22,6 +22,7 @@ namespace OnDotnetLive.Views.Components.TalkComponents
         public ComponentState State { get; set; }
         public ImageBase ThumbnailImageBase { get; set; }
         public LabelBase TitleLabelBase { get; set; }
+        public LabelBase DescriptionLabelBase { get; set; }
         public LabelBase NameLabelBase { get; set; }
         public ButtonBase WatchButtonBase { get; set; }
 

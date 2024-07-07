@@ -17,6 +17,9 @@ namespace OnDotnetLive.Views.Bases
         [Parameter]
         public LabelBaseTypography Typo { get; set; }
 
+        [Parameter]
+        public bool IsVisible { get; set; } = true;
+
         private Typography GetTypography() => Typo switch
         {
             LabelBaseTypography.Body => Typography.Body,

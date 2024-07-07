@@ -1,3 +1,6 @@
 ﻿@using Microsoft.FluentUI.AspNetCore.Components
 
-<FluentLabel Typo=@GetTypography()> @Text </FluentLabel>
+@if (IsVisible)
+{
+    <FluentLabel Typo=@GetTypography()> @Text </FluentLabel>
+}

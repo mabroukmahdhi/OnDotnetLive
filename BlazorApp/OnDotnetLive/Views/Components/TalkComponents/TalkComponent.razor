@@ -1,17 +1,24 @@
+@using OnDotnetLive.Models.Components.LabelBaseTypographies
 @using OnDotnetLive.Views.Bases
+@using OnDotnetLive.Views.Components.ContainerComponents
 
-@if (TalkView != null)
-{
-    <CardBase>
-        <img src="@TalkView.GuestThumbnailUrl" width="100%" />
-        <div style="height:70px">
-            <h4>@TalkView.Title</h4>
-        </div>
-
-        <h5><span style="font-size:small">With</span> @TalkView.GuestName</h5>
-        <SpacerBase />
-        <div style="justify-content:center">
-            <ButtonBase Text="Watch now" OnClick=@WatchNowClicked />
-        </div>
-    </CardBase>
-} 
+<ContainerComponent State=State>
+    <Content>
+        <ConditionBase Condition="TalkView != null">
+            <Match>
+                <CardBase>
+                    <ImageBase @ref=ThumbnailImageBase Source=@TalkView.GuestThumbnailUrl Width="100%" />
+                    <div style="height:70px">
+                        <LabelBase @ref=TitleLabelBase Text=@TalkView.Title Typo="LabelBaseTypography.H4" />
+                    </div>
+                    <LabelBase Text="With" Typo="LabelBaseTypography.Subject" />
+                    <LabelBase @ref=NameLabelBase Text=@TalkView.GuestName Typo="LabelBaseTypography.H5" />
+                    <SpacerBase />
+                    <div style="justify-content:center">
+                        <ButtonBase @ref=WatchButtonBase Text="Watch now" OnClick=@WatchNowClicked />
+                    </div>
+                </CardBase>
+            </Match>
+        </ConditionBase>
+    </Content>
+</ContainerComponent>

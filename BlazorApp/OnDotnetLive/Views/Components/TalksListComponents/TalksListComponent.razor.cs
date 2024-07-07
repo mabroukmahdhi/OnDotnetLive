@@ -6,6 +6,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
+using OnDotnetLive.Models.Components.ComponentStates;
 using OnDotnetLive.Models.Views.TalkViews;
 using OnDotnetLive.Services.Views.TalkViews;
 
@@ -13,14 +14,17 @@ namespace OnDotnetLive.Views.Components.TalksListComponents
 {
     public partial class TalksListComponent : ComponentBase
     {
-        private List<TalkView> talkViews;
-
         [Inject]
         protected ITalkViewService TalkViewService { get; set; }
 
+        public ComponentState State { get; set; }
+        public List<TalkView> TalkViews;
+
+
         protected override async Task OnInitializedAsync()
         {
-            talkViews = await TalkViewService.RetrieveAllTalkViewsAsync();
+            this.TalkViews = await TalkViewService.RetrieveAllTalkViewsAsync();
+            this.State = ComponentState.Content;
         }
     }
 }

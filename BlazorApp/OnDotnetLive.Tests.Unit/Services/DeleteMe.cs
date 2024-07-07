@@ -3,7 +3,7 @@
 //  W/ love for all .NET developers from around the world.
 // ---------------------------------------------------------------
 
-namespace OnDotnetLive.Tests.Unit
+namespace OnDotnetLive.Tests.Unit.Services
 {
     public class DeleteMe
     {

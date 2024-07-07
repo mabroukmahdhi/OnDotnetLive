@@ -27,6 +27,15 @@
         <span class="dismiss">🗙</span>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        async function fetchWithNoCors(url) {
+            const response = await fetch(url, {
+                mode: 'no-cors'
+            });
+            return response;
+        }
+    </script>
+
 </body>
 
 </html>

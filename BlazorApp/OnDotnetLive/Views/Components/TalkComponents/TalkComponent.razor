@@ -3,13 +3,9 @@
 @if (Talk != null)
 {
     <CardBase>
-        <img src="@Talk.ImageUrl" width="100%" />
+        <img src="@Talk.ThumbnailUrl" width="100%" />
         <h4>@Talk.Title</h4>
-        <div>
-
-            <span>@Talk.Speaker</span>
-            <span>@Talk.Date</span>
-        </div>
+       
     </CardBase>
 }
 else

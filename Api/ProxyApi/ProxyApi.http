@@ -1,0 +1,9 @@
+@ProxyApi_HostAddress = http://localhost:5146
+
+GET {{ProxyApi_HostAddress}}/home/
+Accept: application/json
+ 
+###
+
+GET {{ProxyApi_HostAddress}}/api/talks/
+Accept: application/json

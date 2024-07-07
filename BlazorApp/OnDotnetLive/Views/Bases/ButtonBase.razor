@@ -1,3 +1,7 @@
 ﻿@using Microsoft.FluentUI.AspNetCore.Components
 
-<FluentButton OnClick=@HandleClick Appearance=@Appearance.Accent>@Text</FluentButton>
+<FluentButton OnClick=@Click
+              Disabled=@IsDisabled
+              Appearance=@Appearance.Accent>
+    @Text
+</FluentButton>

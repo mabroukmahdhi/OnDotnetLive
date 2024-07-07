@@ -5,6 +5,7 @@
 
 
 using FluentAssertions;
+using Moq;
 using OnDotnetLive.Models.Components.ComponentStates;
 using OnDotnetLive.Views.Components.TalkComponents;
 
@@ -73,5 +74,26 @@ namespace OnDotnetLive.Tests.Unit.Views.TalksListComponents
             this.navigationServiceMock.VerifyNoOtherCalls();
         }
 
+        [Fact]
+        public void ShouldRedirectToYoutube()
+        {
+            // given
+            var randomTalkView = CreateRandomTalkView();
+            var inputTalkView = randomTalkView;
+            var expectedYouTubeUrl = inputTalkView.YouTubeUrl;
+
+            // when
+            this.renderedTalkComponent = RenderComponent<TalkComponent>(parameters =>
+                parameters.Add(p => p.TalkView, inputTalkView));
+
+            this.renderedTalkComponent.Instance.WatchButtonBase.Click();
+
+            // then
+            this.navigationServiceMock.Verify(Services =>
+                Services.OpenNewTab(expectedYouTubeUrl),
+                    Times.Once);
+
+            this.navigationServiceMock.VerifyNoOtherCalls();
+        }
     }
 }

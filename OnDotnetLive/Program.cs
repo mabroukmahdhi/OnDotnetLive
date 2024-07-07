@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.FluentUI.AspNetCore.Components;
 using OnDotnetLive.Applications;
+using OnDotnetLive.Brokers.Apis;
 
 namespace OnDotnetLive
 {
@@ -22,12 +23,14 @@ namespace OnDotnetLive
             builder.RootComponents.Add<MainApplication>("#app");
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
-
             builder.Services.AddScoped(sp => new HttpClient
             {
                 BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
             });
+
             builder.Services.AddFluentUIComponents();
+
+            builder.Services.AddSingleton<IApiBroker, ApiBroker>();
 
             await builder.Build().RunAsync();
         }
